@@ -38,9 +38,10 @@ module.exports.change = async function(req,res){
 
                     await users.updateOne({email : req.body.email},{password : hashedpassword});
                     
-                    return res.status(200).json({
-                        message:"Password change successful"
-                    });
+                    // return res.status(200).json({
+                    //     message:"Password change successful"
+                    // });
+                    res.redirect("/");
                 }
 
 
